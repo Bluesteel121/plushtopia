@@ -1,0 +1,262 @@
+/* General container styling */
+.container {
+	padding-top: 50px;
+}
+
+/* Link styles */
+.item-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* Cute, rounded card design */
+.thumbnail.item-box {
+	border: none;
+	border-radius: 15px;
+	background: linear-gradient(145deg, #cce7ff, #e6f4ff);
+	box-shadow: 4px 4px 8px #b0d4f1, -4px -4px 8px #f0ffff;
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+}
+
+/* Hover effect for the card */
+.thumbnail.item-box:hover {
+	transform: scale(1.05);
+	box-shadow: 6px 6px 12px #a8cfe7, -6px -6px 12px #ffffff;
+}
+
+/* Item image */
+.item-image {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-bottom: 3px solid #90caf9;
+}
+
+/* Price tag */
+.price-tag {
+	display: inline-block;
+	background-color: #42a5f5;
+	color: white;
+	padding: 7px 20px;
+	border-radius: 20px;
+	font-weight: bold;
+	font-size: 1.2rem;
+	text-align: center;
+	margin: 10px auto;
+	box-shadow: 2px 2px 4px #88c7f8, -2px -2px 4px #ffffff;
+}
+
+/* Caption styling */
+.caption {
+	padding: 20px;
+	text-align: left;
+}
+
+/* Item title */
+.item-title {
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: #1565c0;
+	margin-bottom: 10px;
+	font-family: 'Poppins', sans-serif;
+}
+
+/* Item description */
+.item-description {
+	color: #5c6bc0;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	font-family: 'Comic Sans MS', sans-serif; /* Adds a playful vibe */
+}
+
+/* Item date */
+.item-date {
+	font-size: 0.85rem;
+	color: #8e99f3;
+	margin-top: 10px;
+	font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+	.thumbnail.item-box {
+		margin-bottom: 20px;
+	}
+}
+
+
+/* Scroll Container */
+.scroll-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    gap: 20px; /* Spacing between items */
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80vh; /* Prevent container from expanding too much */
+}
+
+
+/* Hide default scrollbar */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Item Box */
+.item-box {
+    flex: 0 1 calc(25% - 20px); /* 4 items per row with 20px gap */
+    max-width: 250px; /* Limit the maximum width */
+    background-color: #e3f2fd;
+    border: 1px solid #bbdefb;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .item-box {
+        flex: 0 1 calc(50% - 20px); /* 2 items per row on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .item-box {
+        flex: 0 1 100%; /* Full width for single-column layout on small screens */
+    }
+}
+
+
+.item-box:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+}
+
+/* Item Image */
+/* Item Image */
+.item-box img {
+    width: calc(100% - 20px); /* Adjusted to leave space for margins */
+    height: 150px;
+    object-fit: cover;
+    margin: 10px; /* Add margin around the image */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid #bbdefb; /* Optional: Light border for better separation */
+}
+
+
+/* Item Content */
+.item-box h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0d47a1;
+    margin: 10px;
+    text-align: left; /* Align text to the left */
+}
+
+.item-box span {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #64b5f6;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: left; /* Align text to the left */
+    width: fit-content; /* Adjust width to fit the text */
+}
+
+.item-box p {
+    font-size: 0.9rem;
+    color: #455a64;
+    margin: 10px;
+    text-align: left; /* Align text to the left */
+    line-height: 1.4;
+}
+
+
+.item-box span {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #64b5f6;
+    color: white;
+    padding: 5px;
+    margin: 10px auto;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+
+/* Scroll Container */
+.scroll-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to move to the next line */
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80vh; /* Set a maximum height to avoid overflow issues */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: block; /* Optionally show the scrollbar for debugging */
+}
+
+
+/* Item Box */
+.item-box {
+    flex: 0 0 auto; /* Prevent shrinking and set width */
+    width: 250px; /* Adjust item width */
+    background-color: #ffffff;
+    border: 1px solid #bbdefb;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Ensure alignment */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.item-box:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+}
+
+/* Item Image */
+.item-box img {
+    width: calc(100% - 20px); /* Adjusted to leave space for margins */
+    height: 150px;
+    object-fit: cover;
+    margin: 10px; /* Add margin around the image */
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid #bbdefb; /* Optional: Light border for better separation */
+}
+
+/* Item Content */
+.item-box h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0d47a1;
+    margin: 10px;
+    text-align: left; /* Align text to the left */
+}
+
+.item-box span {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #64b5f6;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: left; /* Align text to the left */
+    width: fit-content; /* Adjust width to fit the text */
+}
+
+.item-box p {
+    font-size: 0.9rem;
+    color: #455a64;
+    margin: 10px;
+    text-align: left; /* Align text to the left */
+    line-height: 1.4;
+}
