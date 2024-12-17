@@ -1,0 +1,17 @@
+{
+    "name": "l490/plush-topia",
+    "description": "PHP e-commerce website project",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "L490\\PlushTopia\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mark Allen Raynes and Cezar Bernardino"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
