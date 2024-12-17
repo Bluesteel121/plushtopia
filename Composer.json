@@ -1,7 +1,0 @@
-{
-    "name": "PlushTopia",
-    "description": "A php ecommerce website project",
-    "require": {
-        "monolog/monolog": "^2.0"
-    }
-}
